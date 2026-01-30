@@ -42,9 +42,6 @@ services:
       - app-network
     restart: unless-stopped
 
-volumes:
-  postgres_data:
-    driver: local
 
 networks:
   app-network:
