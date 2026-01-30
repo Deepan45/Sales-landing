@@ -8,13 +8,13 @@ function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <img 
+              {/* <img 
                 src="/src/assets/logo.png" 
                 alt="Infinity Uniquers" 
                 className="h-10 w-auto"
-              />
+              /> */}
               <span className="text-lg font-bold text-white">
-                Infinity Uniquers
+                Infinity Sales
               </span>
             </div>
             <p className="text-sm text-gray-400 max-w-md">
