@@ -8,13 +8,14 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy application code
+# Copy source code
 COPY . .
 
-# Build the application
-RUN npm run dev
+# Build React (Vite) app
+RUN npm run build
 
-# Expose port
+# Expose Vite preview port
 EXPOSE 5173
 
+# Serve built app
 CMD ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "5173"]
