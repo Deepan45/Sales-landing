@@ -130,7 +130,7 @@ function AdminDashboard() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img 
-                src="/src/assets/logo.png" 
+                src="/logo.png" 
                 alt="Infinity Uniquers" 
                 className="h-10 w-auto"
               />

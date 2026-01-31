@@ -14,7 +14,7 @@ function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/src/assets/logo.png" 
+              src="/logo.png" 
               alt="Infinity Uniquers" 
               className="h-10 w-auto"
             />
