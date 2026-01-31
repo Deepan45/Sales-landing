@@ -1,9 +1,3 @@
--- Create database (run this first)
--- CREATE DATABASE salesman_tracking;
-
--- Connect to the database before running the following
-
--- Contacts table for storing contact form submissions
 CREATE TABLE IF NOT EXISTS contacts (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -14,12 +8,10 @@ CREATE TABLE IF NOT EXISTS contacts (
     status VARCHAR(50) DEFAULT 'new'
 );
 
--- Create index on email for faster lookups
-CREATE INDEX idx_contacts_email ON contacts(email);
-CREATE INDEX idx_contacts_created_at ON contacts(created_at DESC);
-CREATE INDEX idx_contacts_status ON contacts(status);
+CREATE INDEX IF NOT EXISTS idx_contacts_email ON contacts(email);
+CREATE INDEX IF NOT EXISTS idx_contacts_created_at ON contacts(created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_contacts_status ON contacts(status);
 
--- Blog posts table (optional - for future use)
 CREATE TABLE IF NOT EXISTS blog_posts (
     id SERIAL PRIMARY KEY,
     title VARCHAR(500) NOT NULL,
@@ -32,10 +24,9 @@ CREATE TABLE IF NOT EXISTS blog_posts (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE INDEX idx_blog_slug ON blog_posts(slug);
-CREATE INDEX idx_blog_published ON blog_posts(published);
+CREATE INDEX IF NOT EXISTS idx_blog_slug ON blog_posts(slug);
+CREATE INDEX IF NOT EXISTS idx_blog_published ON blog_posts(published);
 
--- Subscribers table for newsletter (optional)
 CREATE TABLE IF NOT EXISTS subscribers (
     id SERIAL PRIMARY KEY,
     email VARCHAR(255) UNIQUE NOT NULL,
@@ -43,4 +34,4 @@ CREATE TABLE IF NOT EXISTS subscribers (
     active BOOLEAN DEFAULT true
 );
 
-CREATE INDEX idx_subscribers_email ON subscribers(email);
+CREATE INDEX IF NOT EXISTS idx_subscribers_email ON subscribers(email);
