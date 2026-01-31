@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import logo from "../assets/logo.png"; // page component
+
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,7 +16,7 @@ function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/logo.png" 
+              src={logo} 
               alt="Infinity Uniquers" 
               className="h-10 w-auto"
             />

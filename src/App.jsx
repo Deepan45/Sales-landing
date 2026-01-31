@@ -12,6 +12,7 @@ import AdminBlogList from './pages/admin/AdminBlogList'
 import AdminBlogCreate from './pages/admin/AdminBlogCreate'
 import ProtectedRoute from './components/ProtectedRoute'
 import { AuthProvider } from './context/AuthContext'
+import logo from "./assets/logo.png"; // App.jsx
 
 function App() {
   return (

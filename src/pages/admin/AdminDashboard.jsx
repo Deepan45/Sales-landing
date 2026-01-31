@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
+import logo from "../../assets/logo.png";
+
 
 function AdminDashboard() {
   const [contacts, setContacts] = useState([]);
@@ -15,7 +17,7 @@ function AdminDashboard() {
   const [filter, setFilter] = useState('all');
 
   const { user, logout } = useAuth();
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+  const API_URL = import.meta.env.VITE_API_URL || 'http://147.93.96.119:5000/api';
 
   useEffect(() => {
     document.title = 'Admin Dashboard - Infinity Salesman Tracking';
@@ -130,7 +132,7 @@ function AdminDashboard() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <img 
-                src="/logo.png" 
+                src={logo} 
                 alt="Infinity Uniquers" 
                 className="h-10 w-auto"
               />
