@@ -30,7 +30,7 @@ services:
       dockerfile: Dockerfile
     container_name: salesman-frontend
     environment:
-      VITE_API_URL: http://0.0.0.0:5000/api
+      VITE_API_URL: http://147.93.96.119:5000/api
     ports:
       - "5173:5173"
     depends_on:
