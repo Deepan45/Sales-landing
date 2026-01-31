@@ -17,5 +17,4 @@ RUN npm run build
 # Expose port
 EXPOSE 5173
 
-# Start preview server
-CMD ["npm", "run", "preview"]
+CMD ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "5173"]

@@ -16,7 +16,7 @@ services:
       DB_NAME: salesman_tracking
       DB_USER: admin
       DB_PASSWORD: StrongPass123
-      CORS_ORIGIN: http://localhost:5173
+      CORS_ORIGIN: "*"
     ports:
       - "5000:5000"
     networks:
@@ -30,9 +30,9 @@ services:
       dockerfile: Dockerfile
     container_name: salesman-frontend
     environment:
-      VITE_API_URL: http://localhost:5000/api
+      VITE_API_URL: http://0.0.0.0:5000/api
     ports:
-      - "5173:4173"
+      - "5173:5173"
     depends_on:
       - backend
     networks:
